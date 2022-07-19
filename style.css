@@ -24,6 +24,9 @@ main{
 nav>h2{
     font-size: 2em;
 }
+.menubar{
+    display: none;
+}
 nav>ul{
     display: flex;
 }
@@ -128,6 +131,7 @@ hr{
 .container{
     width: 90%;
     display: flex;
+    align-items: center;
     margin-top: 60px;
 }
 .container>div:last-child{
@@ -153,4 +157,54 @@ footer{
 footer i{
     margin: 0 20px;
     font-size: 24px;
+}
+
+               /* media queries */
+
+@media only screen and (max-width:688px) {
+    .main{
+        width: 100%;
+    }
+    .navbar>nav{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    nav>h2{
+        font-size: 1.2em;
+    }
+    .menubar{
+        display: block;
+        font-size: 1.5em;
+    }
+    nav>ul{
+        display: none;
+    }
+    .top-section{
+        flex-direction: column-reverse;
+    }
+    .half-width{
+        width: 100%;
+    }
+        /* brand logos  */
+    .brand-logos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+           /* popular items  */
+
+    .popular-items{
+        grid-template-columns: 1fr;
+    }
+
+           /* last section  */
+    .container{
+        flex-direction: column;
+    }
+    .container>div:last-child{
+        width: 100%;
+        margin: auto;
+    }
+    .container>div>h2{
+        font-size: 1.5em;
+    }
 }
